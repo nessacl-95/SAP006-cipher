@@ -5,10 +5,50 @@
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<header>
+  <h1>Um lugar seguro</h1>
+</header>
+
+<article>
+  <h3>Qual é o objetivo deste site?</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin.
+
+  </p>
+</article>
+
 <body>
-  <div id="root">
-    <h1>Hello world!</h1>
-  </div>
+
+  <form>
+
+    <div id="cifra">
+
+      <h4>CIFRAR MENSAGEM</h4>
+      <label for="cifrarOffset">Chave de deslocamento</label>
+      <input type="number" name="cifrarOffset" id="cifrarOffset"><br></br>
+      <label for="cifrar">Mensagem a ser cifrada</label>
+      <input type="text" name="cifrarString" id="cifrarString" class="textbox" required>
+      <textarea row = "3" name="resultCifrar" id="resultCifrar" class="textbox"></textarea><br></br>
+      <button class="botao" type="submit" name="cifrarMensagem" id="cifrarMensagem" required>Cifrar</button>
+
+    </div>
+
+    <div id="decifra">
+
+      <h4>DECIFRAR MENSAGEM</h4>
+      <label for="decifrarOffset">Chave de deslocamento</label>
+      <input type="number" name="decifrarOffset" id="decifrarOffset"><br></br>
+      <label for="decifrar">Mensagem a ser decifrada</label>
+      <input type="text" name="decifrarString" id="decifrarString" class="textbox">
+      <textarea row = "3" name="resultDecifrar" id="resultDecifrar" class="textbox"></textarea><br></br>
+      <button class="botao" type="submit" name="decifrarMensagem" id="decifrarMensagem">Decifrar</button>
+
+    </div>
+
+  </form>
   <script src="index.js" type="module"></script>
+  <script src="cipher.js" type="module"></script>
 </body>
+<footer>
+  <address>Vanessa Lima, 2021.</address>
+</footer>
 </html>

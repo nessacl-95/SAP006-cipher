@@ -1,1 +1,12 @@
-/* css */
+body {
+    background-color: cornsilk;
+    border: thick;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+.textbox{
+    display: inline-block;
+    border-radius: 2px;
+}
