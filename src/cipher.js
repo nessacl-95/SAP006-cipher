@@ -21,8 +21,8 @@ function cipherDecode(string, offset){
   let newMessage = ""; 
   for(let i=0; i <= string.length; i++){
     let codeString = string.charCodeAt(i);
-    let startCapitalLetters = 65;
-    let startSmallLetters = 97;
+    let startCapitalLetters = 90;
+    let startSmallLetters = 122;
     if((codeString >= 65) && (codeString <= 90)){
       decifrar.push(String.fromCharCode(((codeString - startCapitalLetters - offset)% 26)+ startCapitalLetters));
     } else if((codeString >= 97) && (codeString <= 122)){
@@ -32,4 +32,5 @@ function cipherDecode(string, offset){
   newMessage = (decifrar.join(""));
   return newMessage
 }
-export default cipherEncode; cipherDecode;
+export default cipherEncode
+export {cipherDecode}
