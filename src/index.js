@@ -1,25 +1,24 @@
-import cipherEncode from './cipher.js';
-import {cipherDecode} from './cipher.js';
+import cipher from './cipher.js';
 
+document.getElementById("cifrarMensagem").addEventListener("click", cipherEncode);
+document.getElementById("decifrarMensagem").addEventListener("click", cipherDecode);
 
-document.getElementById("cifrarMensagem").addEventListener("click", encode);
-document.getElementById("decifrarMensagem").addEventListener("click", decode);
-
-function encode(e){
+function cipherEncode(e){
     let string = document.getElementById("cifrarString").value
     let offset = parseInt(document.getElementById("cifrarOffset").value)
-    let result = cipherEncode(string, offset);
+    let result = cipher.encode(offset, string);
     e.preventDefault();
 
     document.getElementById("resultCifrar").innerHTML = result;
 }
 
-function decode(e){
+function cipherDecode(e){
     let string = document.getElementById("decifrarString").value
     let offset = parseInt(document.getElementById("decifrarOffset").value)
-    let result = cipherDecode(string, offset);
+    let result = cipher.decode(offset, string);
     e.preventDefault();
 
     document.getElementById("resultDecifrar").innerHTML = result;
     
 }
+console.log(cipher)
