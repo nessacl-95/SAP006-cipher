@@ -16,10 +16,10 @@ const cipher = {
       if((codeString >= 65) && (codeString <= 90)){
         cifrar.push(String.fromCharCode(((codeString - startCapitalLetters + offset)% 26)+ startCapitalLetters))
       } else if((codeString >= 97) && (codeString <= 122)){
-        cifrar.push(String.fromCharCode(((codeString - startSmallLetters + offset)% 26)+ startSmallLetters))
+          cifrar.push(String.fromCharCode(((codeString - startSmallLetters + offset)% 26)+ startSmallLetters))
       } else if((codeString >= 32) && (codeString <= 64)){
-        cifrar.push(String.fromCharCode(codeString))
-      }
+          cifrar.push(String.fromCharCode(codeString))
+      } 
     }
     return (cifrar.join(""))
   },
@@ -40,9 +40,9 @@ const cipher = {
       if((codeString >= 65) && (codeString <= 90)){
         decifrar.push(String.fromCharCode(((codeString - startCapitalLetters - offset)% 26)+ startCapitalLetters));
       } else if((codeString >= 97) && (codeString <= 122)){
-        decifrar.push(String.fromCharCode(((codeString - startSmallLetters - offset)% 26)+ startSmallLetters));
+          decifrar.push(String.fromCharCode(((codeString - startSmallLetters - offset)% 26)+ startSmallLetters));
       } else if((codeString >= 32) && (codeString <= 64)){
-        decifrar.push(String.fromCharCode(codeString));
+          decifrar.push(String.fromCharCode(codeString));
       }
     } 
     return (decifrar.join(""))

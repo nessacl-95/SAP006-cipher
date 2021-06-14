@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
 </head>
-<header>
-  <h1>Um lugar seguro</h1>
-</header>
+<main>
+  <header>
+    <h1 id="titulo">Um lugar seguro</h1>
+  </header>
 
-<article>
-  <h3>Qual é o objetivo deste site?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Porta lorem mollis aliquam ut porttitor leo a diam sollicitudin.
+  <article>
+    <h3 class="subtitulo">Qual é o objetivo deste site?</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+      ut labore et dolore magna aliqua. Vel elit scelerisque mauris pellentesque pulvinar pellentesque 
+      habitant. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Porta lorem mollis aliquam 
+      ut porttitor leo a diam sollicitudin.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo asperiores molestiae, incidunt 
+      reprehenderit qui debitis iste dolor dolores quas sunt eius? Vitae repellat, amet assumenda debitis 
+      deserunt saepe temporibus dolorum.
+    </p>
+  </article>
 
-  </p>
-</article>
-
-<body>
-
-  <form>
+  <body>
+    <form>
 
     <div id="cifra">
 
-      <h4>CIFRAR MENSAGEM</h4>
-      <label for="cifrarOffset">Chave de deslocamento</label>
-      <input type="number" name="cifrarOffset" id="cifrarOffset">
-      <label for="cifrar">Mensagem a ser cifrada</label>
-      <input type="text" name="cifrarString" id="cifrarString" class="textbox">
-      <textarea row = "3" name="resultCifrar" id="resultCifrar" class="textbox"></textarea>
-      <button class="botao" type="submit" name="cifrarMensagem" id="cifrarMensagem" required>Cifrar</button>
-
+      <h3 class="subtitulo">Cifrar mensagem</h3>
+         
+      <container class="flex-containeroffset">
+        <label for="offset">Escolha uma chave de deslocamento:</label>
+        <input type="number" name="cifraOffset" id="cifrarOffset" class="offset">
+      </container>
+      <container class="flex-container">
+        <input type="text" name="inputCifra" id="inputCifra" class="textbox" placeholder="Mensagem a ser cifrada">
+        <div name="outputCifra" id="outputCifra" class="resultbox" placeholder="Resultado"></div>
+      </container>
+      <container class="flex-container">
+        <button class="botao" type="submit" name="cifrarMensagem" id="cifrarMensagem" required>Cifrar</button>
+      </container>
     </div>
 
     <div id="decifra">
 
-      <h4>DECIFRAR MENSAGEM</h4>
-      <label for="decifrarOffset">Chave de deslocamento</label>
-      <input type="number" name="decifrarOffset" id="decifrarOffset">
-      <label for="decifrar">Mensagem a ser decifrada</label>
-      <input type="text" name="decifrarString" id="decifrarString" class="textbox">
-      <textarea row = "3" name="resultDecifrar" id="resultDecifrar" class="textbox"></textarea>
-      <button class="botao" type="submit" name="decifrarMensagem" id="decifrarMensagem">Decifrar</button>
-
-    </div>
+      <h3 class="subtitulo">Decifrar mensagem</h3>
+        
+      <container class="flex-containeroffset">
+        <label for="offset">Escolha uma chave de deslocamento:</label>
+        <input type="number" name="decifraOffset" id="decifrarOffset" class="offset">
+      </container>
+      <container class="flex-container">
+        <input type="text" name="inputDecifra" id="inputDecifra" class="textbox" placeholder="Mensagem a ser decifrada">
+        <div name="outputDecifra" id="outputDecifra" class="resultbox" placeholder="Resultado"></div>
+      </container>
+      <container class="flex-container">
+        <button class="botao" type="submit" name="decifrarMensagem" id="decifrarMensagem">Decifrar</button>
+      </container>
+      </div>
 
   </form>
+  
   <script src="cipher.js" type="module"></script>
   <script src="index.js" type="module"></script>
-  
-</body>
+  </body>
+
+</main>
+
 <footer>
-  <address>Vanessa Lima, 2021.</address>
+  <address>©Vanessa Lima, 2021.</address>
 </footer>
+
 </html>

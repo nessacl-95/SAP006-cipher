@@ -1,12 +1,100 @@
-body {
-    background-color: cornsilk;
-    border: thick;
-    margin-left: 36%;
-    margin-top: 2%;
-    justify-content: center;
+*{
+    font-family: Arial, Helvetica, 'Roboto Condensed';
 }
 
-.textbox{
+main{
+    background-color: white;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #9c8c82da;
+    padding-bottom: 100px;
+}
+
+body{
+    background-image: linear-gradient(to right, #D9D7D7, #DFE7F2);
+}
+
+#titulo{
+    color: #916769;
+    font-family: Arial;
+    text-align: center;
+    text-shadow: 1px 1px 2px #a88787be;
+}
+
+.subtitulo{
+    color: #B88284;
+    font-family: 'Roboto Condensed';
+    text-align: left;
+	margin: 50px 10px 30px 20px;
+	font-weight: normal;
+}
+
+p{
+    font-family: Arial;
+    text-align: center;
+    text-indent: 10px;
+    margin: 20px;
+}
+
+.flex-container {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+}
+
+.flex-containeroffset{
     display: inline-block;
-    border-radius: 2px;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-items: left;
+}
+
+input, button, .resultbox{
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #DE9EA0;
+}
+
+button{
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: #B88284;
+    color: white;
+}
+
+#inputCifra, #inputDecifra{
+    margin-right: 30px;
+    padding: 50px;
+}
+
+#offset{
+    margin-bottom: 20px;
+}
+
+footer{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.resultbox{
+    background-color: rgb(165, 164, 164);
+    height: 15px;
+    width: 177px;
+    padding: 50px;
+    border: 2px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+label{
+    font-size: 0.8em;
 }
