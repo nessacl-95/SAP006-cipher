@@ -35,9 +35,11 @@ Com base no aumento dos casos de violência doméstica no Brasil em decorrência
 Esta ferramenta fornece ao usuário a capacidade de redigir uma mensagem pessoal com o intuito de compartilhá-la com pessoas próximas que podem ajudar nessas circunstâncias, cuja interpretação poderá ser realizada somente por aqueles que possuem a chave de deslocamento selecionada pelo usuário, garantindo assim, a privacidade da qual o usuário procura.
 
 ## 4. Como funciona?
-O usuário
+A interface é composta por um texto introdutório, duas caixas para inserir a mensagem, uma para codificar e outra para decodificar, duas caixas com o resultado final da codificação/decodifição e duas caixas para a chave de deslocamento.
+O usuário pode redigir sua mensagem a ser codificada, selecionar a chave de deslocamento e clicar no botão "Codificar" para visualizar o resultado ao lado.
+Ele também pode inserir uma mensagem já codificada, selecionar a chave na qual o texto foi codificado e clicar no botão "Decodificar" para receber o conteúdo da mensagem.
 
-## 4. Conteúdos aprendidos
+## 5. Conteúdos aprendidos
 
 ### HTML e CSS
 
