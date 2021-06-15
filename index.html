@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+</head>
+<main>
+  <header>
+    <h1 id="titulo">Um lugar seguro</h1>
+  </header>
+
+  <article>
+    <h3 class="subtitulo">Qual é o objetivo deste site?</h3>
+    <p>
+      Somente em 2020, <a href="https://g1.globo.com/politica/noticia/2021/03/07/brasil-teve-105-mil-denuncias-de-violencia-contra-mulher-em-2020-pandemia-e-fator-diz-damares.ghtml" target="_blank">foram registradas mais de 100 mil denúncias de violência doméstica no Brasil. </a> 
+      Em plena pandemia, vítimas foram obrigadas a conviver por um extenso período de tempo com seus agressores, 
+      desprovidas de liberdade e, em muitos casos, de privacidade, elas foram forçadas a carregarem seus medos e 
+      angústias em silêncio ao longo do último ano.
+    </p>
+    <p>
+      Essa aplicação foi criada com o intuito de promover um ambiente seguro para que você ou alguém que você conheça
+      possa quebrar o silêncio e redigir uma mensagem codificada que poderá ser lida somente por um parente, amigo ou 
+      alguém próximo que seja capaz de fornecer o apoio de que precisa.
+    </p>
+  </article>
+
+  <body>
+    <form>
+
+    <div id="cifra">
+
+      <h3 class="subtitulo">Codificar uma mensagem</h3>
+         
+      <container class="flex-containeroffset">
+        <label for="offset">Escolha uma chave de deslocamento:</label>
+        <input type="number" name="cifraOffset" id="cifrarOffset" class="offset" autocomplete="off">
+      </container>
+      <container class="flex-container">
+        <input type="text" name="inputCifra" id="inputCifra" class="textbox" placeholder="Insira sua mensagem" autocomplete="off">
+        <textarea name="outputCifra" id="outputCifra" class="resultbox" placeholder="Resultado"></textarea>
+      </container>
+      <container class="flex-container">
+        <button class="botao" type="submit" name="cifrarMensagem" id="cifrarMensagem" required>Codificar</button>
+      </container>
+    </div>
+
+    <div id="decifra">
+
+      <h3 class="subtitulo">Decodificar uma mensagem</h3>
+        
+      <container class="flex-containeroffset">
+        <label for="offset">Escolha uma chave de deslocamento:</label>
+        <input type="number" name="decifraOffset" id="decifrarOffset" class="offset" autocomplete="off">
+      </container>
+      <container class="flex-container">
+        <input type="text" name="inputDecifra" id="inputDecifra" class="textbox" placeholder="Insira sua mensagem" autocomplete="off">
+        <textarea name="outputDecifra" id="outputDecifra" class="resultbox" placeholder="Resultado"></textarea>
+      </container>
+      <container class="flex-container">
+        <button class="botao" type="submit" name="decifrarMensagem" id="decifrarMensagem">Decodificar</button>
+      </container>
+      </div>
+
+  </form>
+  
+  <script src="cipher.js" type="module"></script>
+  <script src="index.js" type="module"></script>
+  </body>
+
+</main>
+
+<footer>
+  <address>©Vanessa Lima, 2021.</address>
+</footer>
+
+</html>
