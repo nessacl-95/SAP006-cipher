@@ -1,98 +1,111 @@
-*{
-    font-family: Arial, Helvetica, 'Roboto Condensed';
+* {   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* configurações padrão e pesquisar como fazer variaveis em CSS para cores*/
+  font-family: Arial, Helvetica, 'Roboto Condensed';
+}
+/*sempre formatar o HTML e o script precisa ser no final*/
+/*div poderia ser section*/
+body {
+  background-image: linear-gradient(to right, #D9D7D7, #DFE7F2);
 }
 
-main{
-    background-color: white;
-    width: 600px;
-    padding: 10px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 4px 4px 3px #9c8c82da;
-    padding-bottom: 100px;
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 60rem;
+  padding: 10px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px #9c8c82da;
+  padding-bottom: 100px;
 }
 
-body{
-    background-image: linear-gradient(to right, #D9D7D7, #DFE7F2);
+#titulo {
+  color: #916769;
+  font-family: 'Roboto Condensed';
+  text-align: center;
+  text-shadow: 1px 1px 2px #a88787be;
 }
 
-#titulo{
-    color: #916769;
-    font-family: 'Roboto Condensed';
-    text-align: center;
-    text-shadow: 1px 1px 2px #a88787be;
-}
-
-.subtitulo{
-    color: #B88284;
-    font-family: Helvetica;
-    text-align: left;
+.subtitulo {
+  color: #B88284;
+  font-family: Helvetica;
+  text-align: left;
 	margin: 50px 10px 30px 20px;
 	font-weight: normal;
-    text-shadow: 1px 1px 2px #DF6D6B;
+  text-shadow: 1px 1px 2px #DF6D6B;
 }
 
-p{
-    font-family: Arial;
-    text-align: center;
-    text-indent: 10px;
-    margin: 20px;
+p {
+  font-family: Arial;
+  text-align: center;
+  text-indent: 10px;
+  margin: 20px;
 }
 
 .flex-container {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex: 1;
+  flex-wrap: wrap;
+  justify-content: center; /*pesquisar a diferença entre justify-content e align-items*/
+  flex: 1; /*o botao, por estar solto, não precisa de um container*/
 }
 
-.flex-containeroffset{
-    display: inline-block;
-    flex-direction: row;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    align-items: left;
+.flex-containeroffset {
+  display: inline-block;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  align-items: left;
 }
 
-input, button, .resultbox{
-    border-radius: 5px;
-    box-shadow: 2px 2px 1px #DE9EA0;
+input, button, .resultbox {
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #DE9EA0;
 }
 
-button{
-    margin-top: 20px;
+button {
+  margin-top: 20px;
 }
 
-button:hover{
-    background-color: #B88284;
-    color: white;
+button:hover {
+  background-color: #B88284;
+  color: white;
 }
 
-#inputCifra, #inputDecifra{
-    margin-right: 30px;
-    padding: 50px;
+#inputCifra, #inputDecifra {
+  margin-right: 30px;
+  padding: 50px;
 }
 
-footer{
-    margin-top: 10px;
-    margin-bottom: 100px;
-    text-align: center;
-    font-size: 0.8em;
+footer {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 0.8em; /*pesquisar a diferença entre as unidades px e em*/
 }
 
-.resultbox{
-    background-color:#C9C9C9;
-    height: 15px;
-    width: 177px;
-    padding: 50px;
-    border: 2px;
-    resize: none;
+.resultbox {
+  background-color:#C9C9C9;
+  height: 15px;
+  width: 177px;
+  padding: 50px;
+  border: 2px;
+  resize: none; /*fazer alterações no padding para ficar no tamanho certo*/
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
-label{
-    font-size: 0.9em;
+label {
+  font-size: 0.9em;
+}
+/*tudo precisa estar dentro do body, até footer e header*/
+
+@media (min-width: 375px) and (max-width: 420px){
+  .main {
+    width: 26rem;
+  }   
 }
