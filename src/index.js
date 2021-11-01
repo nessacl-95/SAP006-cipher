@@ -58,6 +58,6 @@ export const errorsMessage = (offset, string) => {
     message.innerHTML = "Insira uma chave numérica";
   } else if (!string) {
     modal.style.display = "block";
-    message.innerHTML = "Insira um texto";
+    message.innerHTML = "Insira uma mensagem";
   }
 }
