@@ -1,13 +1,7 @@
+import { errorsMessage } from "./index.js";
+
 const START_CAPITAL_LETTERS = "A".charCodeAt();
 const START_SMALL_LETTERS = "a".charCodeAt();
-
-function errorsMessage(offset, string) {
-  if (offset !== offset) {
-    console.log('Insira uma chave numérica')
-  } else if (string === "") {
-    console.log("Insira um texto")
-  }
-}
 
 const cipher = {
 
@@ -28,10 +22,8 @@ const cipher = {
     return newText.join("");
   },
 
-
   decode: function (offset, string) {
     return cipher.encode(-offset, string);
   }
 };
-export default cipher
-
+export default cipher;

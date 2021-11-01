@@ -1,108 +1,209 @@
 * {   
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* configurações padrão e pesquisar como fazer variaveis em CSS para cores*/
-  font-family: Arial, Helvetica, 'Roboto Condensed';
+  box-sizing: border-box;
+  font-family: 'Poppins', Helvetica, 'Roboto Condensed';
 }
-/*sempre formatar o HTML e o script precisa ser no final*/
-/*div poderia ser section*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap');
+
+:root {
+  --light-grey: #C9C9C9;
+  --grey: #8C8C8C;
+  --dark-grey: #595959;
+  --white: #F2F2F2;
+  --light-pink: #F2DFE2;
+  --pink: #F2C9CC;
+  --dark-pink: #c87e7d;
+}
+
 body {
-  background-image: linear-gradient(to right, #D9D7D7, #DFE7F2);
+  background-image: linear-gradient(to right, var(--light-pink), var(--light-grey));
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  background-color: white;
-  width: 60rem;
-  padding: 10px;
+  background-color: var(--white);
+  width: 55rem;
+  height: auto;
+  padding: 30px;
   margin: auto;
   border-radius: 10px;
-  box-shadow: 4px 4px 3px #9c8c82da;
-  padding-bottom: 100px;
+  box-shadow: 4px 4px 3px var(--grey);
 }
 
-#titulo {
-  color: #916769;
-  font-family: 'Roboto Condensed';
+.title {
+  color: var(--dark-pink);
   text-align: center;
-  text-shadow: 1px 1px 2px #a88787be;
+  text-shadow: 1px 1px 2px var(--light-pink);
+  font-family: 'Poppins';
 }
 
-.subtitulo {
-  color: #B88284;
-  font-family: Helvetica;
+.subtitle {
+  color: var(--dark-pink);
   text-align: left;
-	margin: 50px 10px 30px 20px;
-	font-weight: normal;
-  text-shadow: 1px 1px 2px #DF6D6B;
+	margin: 1.5rem 1.2rem;
+	font-weight: bold;
+  text-shadow: 1px 1px 2px var(--light-pink);
+  font-family: 'Poppins';
 }
 
-p {
-  font-family: Arial;
+.info-text {
   text-align: center;
   text-indent: 10px;
   margin: 20px;
+  font-family: 'Poppins';
 }
 
-.flex-container {
-	display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /*pesquisar a diferença entre justify-content e align-items*/
-  flex: 1; /*o botao, por estar solto, não precisa de um container*/
+.offset {
+  font-size: 1rem;
+  width: 3rem;
+  height: 2rem;
+  margin: 0.5rem;
+  text-align: center;
 }
 
-.flex-containeroffset {
-  display: inline-block;
+.cipher-container, .offset-container, .copy-area {
+  display: flex;
   flex-direction: row;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  align-items: left;
+  align-items: center;
 }
 
-input, button, .resultbox {
+.cipher-container {
+  justify-content: space-between;
+  margin: 1.8rem 1rem;
+}
+
+.input-box, .output-container, .result-box, .copy-area {
+  width: 22rem;
+}
+
+.input-box, .output-container {
+  height: 15rem;
   border-radius: 5px;
-  box-shadow: 2px 2px 1px #DE9EA0;
+  box-shadow: 2px 2px 1px var(--pink);
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
-button {
-  margin-top: 20px;
+.output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-grey);
 }
 
-button:hover {
+.result-box {
+  margin: 1rem;
+  height: 14rem;
+  text-align: center;
+  overflow: auto;
+  border: none;
+  resize: none;
+  background-color: var(--light-grey);
+}
+
+.copy {
+  font-size: 1.05rem;
+  font-weight: bolder;
+  color: var(--dark-grey);
+}
+
+.copy-area {
+  height: 1.7rem;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.label {
+  font-family: 'Poppins';
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2.5rem;
+}
+
+.button {
+  border-radius: 5px;
+  width: 8rem;
+  padding: 10px;
+  background-color: var(--grey);
+  color: var(--pink);
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.button:hover {
   background-color: #B88284;
   color: white;
+  transform: scale(1.05);
 }
 
-#inputCifra, #inputDecifra {
-  margin-right: 30px;
-  padding: 50px;
-}
-
-footer {
+.footer {
   margin-top: 10px;
   margin-bottom: 100px;
   text-align: center;
-  font-size: 0.8em; /*pesquisar a diferença entre as unidades px e em*/
-}
-
-.resultbox {
-  background-color:#C9C9C9;
-  height: 15px;
-  width: 177px;
-  padding: 50px;
-  border: 2px;
-  resize: none; /*fazer alterações no padding para ficar no tamanho certo*/
+  font-size: 0.9em;
 }
 
 input[type="number"] {
   -moz-appearance: textfield;
 }
 
-label {
-  font-size: 0.9em;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
-/*tudo precisa estar dentro do body, até footer e header*/
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-arrow-right {
+  font-size: 3rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.fas, .fab {
+  color: var(--dark-grey);
+  margin: 1rem;
+}
+
+.contact {
+  font-size: 2.5rem;
+}
 
 @media (min-width: 375px) and (max-width: 420px){
   .main {
