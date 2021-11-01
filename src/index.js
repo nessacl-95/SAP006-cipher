@@ -1,4 +1,5 @@
 import cipher from './cipher.js';
+import errors from './errors.js';
 
 const modal = document.getElementById("modal");
 const closeButton = document.getElementById("close-button");
@@ -39,15 +40,15 @@ copyButton.addEventListener("click", () => {
   output.select();
   if (!output.value) {
     modal.style.display = "block";
-    message.innerHTML = "Insira uma mensagem";
+    message.innerHTML = errors.text;
   } else {
     navigator.clipboard.writeText(output.value)
-      .then(() => copyMessage.innerHTML = "Mensagem copiada!");
+      .then(() => copyMessage.innerHTML = errors.copied);
   }
 
   window.onclick = (event) => {
     if (event.target != output || event.target != copyButton) {
-      copyMessage.innerHTML = "Copiar mensagem";
+      copyMessage.innerHTML = errors.copy;
     }
   }
 });
@@ -55,9 +56,9 @@ copyButton.addEventListener("click", () => {
 export const errorsMessage = (offset, string) => {
   if (offset !== offset) {
     modal.style.display = "block";
-    message.innerHTML = "Insira uma chave numérica";
+    message.innerHTML = errors.key;
   } else if (!string) {
     modal.style.display = "block";
-    message.innerHTML = "Insira uma mensagem";
+    message.innerHTML = errors.text;
   }
 }

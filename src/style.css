@@ -33,38 +33,39 @@ body {
   box-shadow: 0.1rem 0.1rem 0.1rem var(--grey);
 }
 
-.title {
+.title, .subtitle {
   color: var(--dark-pink);
-  text-align: center;
-  text-shadow: 1px 1px 2px var(--light-pink);
+  text-shadow: 0.2rem 0.2rem 0.2rem var(--light-pink);
   font-family: 'Poppins';
+}
+
+.title, .info-text, .offset, .input-box, .output-container, .result-box, .footer {
+  text-align: center;
 }
 
 .subtitle {
-  color: var(--dark-pink);
   text-align: left;
 	margin: 2.5rem 1.2rem;
-	font-weight: bold;
-  text-shadow: 1px 1px 2px var(--light-pink);
-  font-family: 'Poppins';
+  font-weight: normal;
 }
 
 .info-text {
-  text-align: center;
-  text-indent: 10px;
-  margin: 20px;
+  margin: 0.9rem;
   font-family: 'Poppins';
+  font-size: 1.1rem;
+}
+
+.offset, .input-box, .output-container, .label, .footer {
+  font-size: 1rem;
 }
 
 .offset {
-  font-size: 1rem;
   width: 3rem;
   height: 2rem;
   margin: 0.5rem;
-  text-align: center;
 }
 
-.cipher-container, .offset-container, .copy-area {
+.cipher-container, .offset-container, .copy-area, .output-container, .button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -83,23 +84,17 @@ body {
 .input-box, .output-container {
   height: 15rem;
   border-radius: 0.5rem;
-  box-shadow: 2px 2px 1px var(--pink);
-  text-align: center;
-  justify-content: center;
-  font-size: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--pink);
 }
 
 .output-container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   background-color: var(--light-grey);
 }
 
 .result-box {
   margin: 1rem;
   height: 14rem;
-  text-align: center;
   overflow: auto;
   border: none;
   resize: none;
@@ -123,22 +118,18 @@ body {
 .label {
   font-family: 'Poppins';
   margin: 0.5rem;
-  font-size: 1rem;
 }
 
 .button-container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
   margin: 2.5rem;
 }
 
 .button {
-  border-radius: 5px;
+  border-radius: 0.5rem;
   width: 8rem;
-  padding: 10px;
+  padding: 0.8rem;
   background-color: var(--grey);
   color: var(--pink);
   font-weight: bolder;
@@ -152,10 +143,7 @@ body {
 }
 
 .footer {
-  margin-top: 10px;
-  margin-bottom: 100px;
-  text-align: center;
-  font-size: 0.9em;
+  margin: 2rem;
 }
 
 input[type="number"] {
@@ -183,24 +171,19 @@ input[type="number"] {
   background-color: var(--white);
   margin: 25% auto;
   padding: 2rem;
-  border: 3px solid var(--dark-pink);
+  border: 0.2rem solid var(--dark-pink);
   border-radius: 0.5rem;
   width: 30rem;
   font-size: 1.2rem;
 }
 
 .fa-times-circle {
-  color: var(--dark-grey);
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  float: right;
+  font-size: 2rem;
 }
 
 .fa-times-circle:hover,
 .fa-times-circle:focus {
   color: var(--dark-pink);
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -224,7 +207,7 @@ input[type="number"] {
 @media (min-width: 360px) and (max-width: 767px){
   .main {
     width: 25rem;
-    padding: 15px;
+    padding: 1rem;
   }
 
   .cipher-container {
