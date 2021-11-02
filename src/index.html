@@ -11,8 +11,14 @@
 
 <body>
   <main class="main">
-    <header>
+    <header class="header">
       <h1 class="title">Um Lugar Seguro</h1>
+      <input type="checkbox" id="checkbox" class="checkbox" autocomplete="off">
+      <label for="checkbox" id="dark-mode" class="switch">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span class="ball"></span>
+      </label>
     </header>
     <article>
       <h2 class="subtitle">Qual é o objetivo deste site?</h2>
@@ -38,9 +44,9 @@
     <form>
       <h2 class="subtitle">Codificar ou decodificar uma mensagem</h2>
       <container class="offset-container">
-        <label class="label" for="offset">Escolha uma chave de deslocamento:</label>
-        <i class="fas fa-key icon"></i>
+        <label class="info-text" for="offset">Escolha uma chave de deslocamento:</label>
         <input type="number" name="offset" id="offset" class="offset" autocomplete="off">
+        <i class="fas fa-key icon"></i>
       </container>
       <container class="cipher-container">
         <input type="text" name="input" id="input" class="input-box" placeholder="Insira sua mensagem"

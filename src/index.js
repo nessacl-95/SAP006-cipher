@@ -6,6 +6,7 @@ const closeButton = document.getElementById("close-button");
 const message = document.getElementById("message");
 const copyButton = document.getElementById("copy-area");
 const copyMessage = document.getElementById("copy-message");
+const darkMode = document.getElementById("dark-mode");
 const encode = document.getElementById("encode");
 const decode = document.getElementById("decode");
 
@@ -53,6 +54,10 @@ copyButton.addEventListener("click", () => {
   }
 });
 
+darkMode.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
 export const errorsMessage = (offset, string) => {
   if (offset !== offset) {
     modal.style.display = "block";
@@ -61,4 +66,4 @@ export const errorsMessage = (offset, string) => {
     modal.style.display = "block";
     message.innerHTML = errors.text;
   }
-}
+};
