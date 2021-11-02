@@ -279,7 +279,7 @@ input[type="number"] {
   transform: translateX(43px);
 }
 
-@media (min-width: 360px) and (max-width: 767px){
+@media screen and (max-width: 470px) {
   .main {
     width: 25rem;
     padding: 1rem;
