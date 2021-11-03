@@ -59,11 +59,13 @@ darkMode.addEventListener("click", () => {
 });
 
 export const errorsMessage = (offset, string) => {
-  if (offset !== offset) {
+  if (offset !== offset || offset == null) {
     modal.style.display = "block";
     message.innerHTML = errors.key;
+    throw new TypeError(errors.key);  
   } else if (!string) {
     modal.style.display = "block";
     message.innerHTML = errors.text;
+    throw new TypeError(errors.text); 
   }
 };
