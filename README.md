@@ -39,7 +39,30 @@ A interface é composta por um texto introdutório, duas caixas para inserir a m
 O usuário pode redigir sua mensagem a ser codificada, selecionar a chave de deslocamento e clicar no botão "Codificar" para visualizar o resultado ao lado.
 Ele também pode inserir uma mensagem já codificada, selecionar a chave na qual o texto foi codificado e clicar no botão "Decodificar" para receber o conteúdo da mensagem.
 
-## 5. Conteúdos aprendidos
+## 5. Primeira versão
+Segue abaixo um GIF demonstrando a interface da aplicação em sua primeira versão lançada em 15 de junho de 2021.
+
+<img src="./img/first-version.gif>" alt="GIF demonstrando a primeira versão da aplicação">
+
+## 6. Novas implementações
+Posteriormente a aplicação passou por várias mudanças em sua interface e novas funcionalidades foram implementadas.
+
+### 1. Dark Mode
+Ao clicar no icone no topo da tela, o usuário pode optar por utilizar a aplicação em modo escuro (dark mode).
+
+<img src="./img/dark-mode.gif" alt="GIF demonstrando a funcionalidade de modo escuro">
+
+### 2. Copiar texto
+Após codificar/decodificar uma mensagem, o usuário pode clicar em "Copiar mensagem" para ter o texto copiado para a área de transferência em apenas um clique.
+
+<img src="./img/copy-text.gif" alt="GIF demonstrando a funcionalidade de copiar o texto em apenas um clique">
+
+### 3. Mensagens de erro
+Caso não insira as informações corretas, o usuário é alertado com a mensagem informando qual erro foi cometido ao utilizar a aplicação.
+
+<img src="./img/alert.gif" alt="GIF demonstrando o pop-up com mensagens de erro">
+
+## 7. Conteúdos aprendidos
 
 ### HTML e CSS
 
@@ -81,3 +104,9 @@ Ele também pode inserir uma mensagem já codificada, selecionar a chave na qual
 * [x] Desenhar a aplicação pensando e entendendo o usuário.
 * [ ] Criar protótipos para obter feedback e iterar.
 * [x] Aplicar os princípios de desenho visual (contraste, alinhamento, hierarquia)
+
+## 8. Sobre
+
+Projeto desenvolvido durante a sexta geração do Bootcamp Laboratória.
+
+<a href="https://vanessa-cl.github.io/SAP006-cipher/">Deploy da aplicação</a>
